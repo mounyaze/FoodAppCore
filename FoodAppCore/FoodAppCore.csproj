@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FoodAppCore.Data\FoodAppCore.Data.csproj" />
+  </ItemGroup>
+
 </Project>

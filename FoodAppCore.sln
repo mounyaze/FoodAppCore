@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodAppCore", "FoodAppCore\FoodAppCore.csproj", "{EB651741-B4F0-461F-B8CB-5DBFAF3FAD1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodAppCore", "FoodAppCore\FoodAppCore.csproj", "{EB651741-B4F0-461F-B8CB-5DBFAF3FAD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodAppCore.Core", "FoodAppCore.Core\FoodAppCore.Core.csproj", "{24351D8B-7042-4583-B9D1-4448AF079EC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodAppCore.Data", "FoodAppCore.Data\FoodAppCore.Data.csproj", "{7D702AF9-B3FD-46BC-95DD-4180C3CF1559}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EB651741-B4F0-461F-B8CB-5DBFAF3FAD1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB651741-B4F0-461F-B8CB-5DBFAF3FAD1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB651741-B4F0-461F-B8CB-5DBFAF3FAD1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24351D8B-7042-4583-B9D1-4448AF079EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24351D8B-7042-4583-B9D1-4448AF079EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24351D8B-7042-4583-B9D1-4448AF079EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24351D8B-7042-4583-B9D1-4448AF079EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D702AF9-B3FD-46BC-95DD-4180C3CF1559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D702AF9-B3FD-46BC-95DD-4180C3CF1559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D702AF9-B3FD-46BC-95DD-4180C3CF1559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D702AF9-B3FD-46BC-95DD-4180C3CF1559}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

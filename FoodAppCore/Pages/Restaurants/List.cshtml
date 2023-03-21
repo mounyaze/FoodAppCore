@@ -1,0 +1,45 @@
+﻿@page
+@model FoodAppCore.Pages.Restaurants.ListModel
+@{
+}
+<h1> Resataurants    </h1>
+@Model.Message
+<h1>On a side note here are the restaurants :</h1>
+
+<form method="get">
+    <div class="input-group">
+        
+            <input type="search" class="form-control col-md-10" asp-for="SearchTerm" />
+            <span>
+                <button class="btn btn btn-light m-2">
+                 <i class="fa-duotone fa-magnifying-glass"></i>
+                </button>
+            </span>
+       
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr >
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Cuisine</th>
+        </tr>
+    </thead>
+    @foreach(var restaurant in Model.restaurants)
+    {
+    <tr>
+        <td>@restaurant.Name</td>
+        <td>@restaurant.Location</td>
+        <td>@restaurant.Cuisine</td>   
+        <td>
+            <a class="btn btn-lg" asp-page="./Detail" asp-route-restaurantId="@restaurant.ID">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>   
+            </a>
+        </td>
+        
+    </tr>
+    }
+</table>
+
