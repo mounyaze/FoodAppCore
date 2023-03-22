@@ -5,26 +5,23 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FoodAppCore.Pages.Restaurants
 {
-     
-    public class DetailModel : PageModel
+    public class EditModel : PageModel
     {
-        private readonly IRestaurantData restaurantData;
-
-        public DetailModel(IRestaurantData restaurantData)
+        readonly IRestaurantData restaurantData;
+        public Restaurant Restaurant{ get; set; }
+        public EditModel(IRestaurantData restaurantData)
         {
             this.restaurantData = restaurantData;
         }
-        public Restaurant  Restaurant { get; set; }
         public IActionResult OnGet(int restaurantId)
         {
-            
             Restaurant = restaurantData.GetById(restaurantId);
-            if (Restaurant == null)
+
+            if (Restaurant == null) 
             {
                 return RedirectToPage("./NotFound");
             }
             return Page();
-            
         }
     }
 }

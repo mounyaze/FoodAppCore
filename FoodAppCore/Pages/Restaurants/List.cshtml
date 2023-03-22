@@ -12,7 +12,7 @@
             <input type="search" class="form-control col-md-10" asp-for="SearchTerm" />
             <span>
                 <button class="btn btn btn-light m-2">
-                 <i class="fa-duotone fa-magnifying-glass"></i>
+                 <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </span>
        
@@ -20,13 +20,7 @@
 </form>
 
 <table class="table">
-    <thead>
-        <tr >
-            <th scope="col">Name</th>
-            <th scope="col">Location</th>
-            <th scope="col">Cuisine</th>
-        </tr>
-    </thead>
+   
     @foreach(var restaurant in Model.restaurants)
     {
     <tr>
@@ -37,6 +31,9 @@
             <a class="btn btn-lg" asp-page="./Detail" asp-route-restaurantId="@restaurant.ID">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>   
             </a>
+                <a class="btn btn-lg" asp-page="./Edit" asp-route-restaurantId="@restaurant.ID">
+                    <i class="fas fa-edit"></i>
+                </a>
         </td>
         
     </tr>

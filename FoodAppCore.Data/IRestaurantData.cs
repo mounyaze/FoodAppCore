@@ -10,6 +10,7 @@ namespace FoodAppCore.Data
     public interface IRestaurantData
     {
         IEnumerable<Restaurant> GetRestaurantsByName(string name);
+        Restaurant GetById(int id);
     }
     public class InMemoryRestaurantData : IRestaurantData
     {
@@ -26,6 +27,12 @@ namespace FoodAppCore.Data
             };
             
         }
+
+        public Restaurant GetById(int id)
+        {
+            return restaurants.FirstOrDefault(x => x.ID == id);
+        }
+
         public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
         {
             return from r in restaurants where string.IsNullOrEmpty(name) || r.Name.StartsWith(name) 

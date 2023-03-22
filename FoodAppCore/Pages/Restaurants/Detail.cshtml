@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{restaurantId:int}"
 @model FoodAppCore.Pages.Restaurants.DetailModel
 @{
     ViewData["Title"] = "Details";
@@ -7,9 +7,6 @@
 <h2>@Model.Restaurant.Name</h2>
 <div>
     Id : @Model.Restaurant.ID
-</div>
-<div>
-    Name : @Model.Restaurant.Name
 </div>
 <div>
     Location : @Model.Restaurant.Location
